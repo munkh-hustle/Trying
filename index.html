@@ -1665,12 +1665,13 @@
                               <span class="trending-year">Feb 2019</span>
                             </div>
                             <div class="iq-custom-select d-inline-block sea-epi">
-                              <select name="Seasons" class="form-control season-select">
+                              <label for="season-select" class="sr-only">Select Season</label>
+                              <select name="Seasons" id="season-select" class="form-control season-select">
                                 <option value="Season1">Season 1</option>
                                 <option value="Season2">Season 2</option>
                                 <option value="Season3">Season 3</option>
                                 <option value="Season4">Season 4</option>
-                                <option value="Season4">Season 4</option>
+                                <option value="Season5">Season 5</option>
                                 <option value="Season6">Season 6</option>
                               </select>
                             </div>
@@ -2163,19 +2164,29 @@
                               <span class="trending-year">Feb 2019</span>
                             </div>
                             <div class="iq-custom-select d-inline-block sea-epi">
-                              <select name="Seasons" class="form-control season-select">
-                                <option value="Season1">Season 1</option>
-                                <option value="Season2">Season 2</option>
-                                <option value="Season3">Season 3</option>
-                                <option value="Season4">Season 4</option>
-                                <option value="Season5">Season 5</option>
-                                <option value="Season6">Season 6</option>
-                                <option value="Season7">Season 7</option>
-                                <option value="Season8">Season 8</option>
-                                <option value="Season9">Season 9</option>
-                                <option value="Season10">Season 10</option>
-                                <option value="Season11">Season 11</option>
-                                <option value="Season12">Season 12</option>
+                              <!-- Accessibility: Add a label (visually hidden if needed) -->
+                              <label for="season-select" class="sr-only">Select Season</label>
+                              
+                              <!-- Select dropdown with proper attributes -->
+                              <select 
+                                name="Seasons" 
+                                id="season-select" 
+                                class="form-control season-select"
+                                aria-label="Select Season"><!-- Fallback for screen readers -->                              
+                                <!-- Consistent value format (SeasonX or SX) -->
+                                <option value="" disabled selected>Select a Season</option> <!-- Placeholder option -->
+                                <option value="S1">Season 1</option>
+                                <option value="S2">Season 2</option>
+                                <option value="S3">Season 3</option>
+                                <option value="S4">Season 4</option>
+                                <option value="S5">Season 5</option>
+                                <option value="S6">Season 6</option>
+                                <option value="S7">Season 7</option>
+                                <option value="S8">Season 8</option>
+                                <option value="S9">Season 9</option>
+                                <option value="S10">Season 10</option>
+                                <option value="S11">Season 11</option>
+                                <option value="S12">Season 12</option>
                               </select>
                             </div>
 
@@ -2667,12 +2678,25 @@
                               <span class="trending-year">Feb 2019</span>
                             </div>
                             <div class="iq-custom-select d-inline-block sea-epi">
-                              <select name="Seasons" class="form-control season-select">
+                              <!-- Accessibility: Label for screen readers (hidden visually) -->
+                              <label for="season-select" class="sr-only">Select Season</label>
+                              
+                              <!-- Dropdown with proper attributes -->
+                              <select 
+                                name="Seasons" 
+                                id="season-select" 
+                                class="form-control season-select"
+                                aria-label="Select Season"><!-- Fallback for accessibility -->
+                              >
+                                <!-- Placeholder (optional) -->
+                                <option value="" disabled selected>Choose a season...</option>
+                                
+                                <!-- Corrected seasons (no duplicates, sequential) -->
                                 <option value="Season1">Season 1</option>
                                 <option value="Season2">Season 2</option>
                                 <option value="Season3">Season 3</option>
                                 <option value="Season4">Season 4</option>
-                                <option value="Season4">Season 4</option>
+                                <option value="Season5">Season 5</option> <!-- Added missing Season 5 -->
                                 <option value="Season6">Season 6</option>
                               </select>
                             </div>

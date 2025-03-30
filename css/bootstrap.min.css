@@ -39,12 +39,22 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+               'Helvetica Neue', Arial, sans-serif;
   line-height: 1.15;
+  /* Text size adjustment */
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  /* Scrollbar behavior */
+  -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: scrollbar;
+  /* Interaction enhancements */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Modern font rendering */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
 }
 
 @-ms-viewport {
@@ -9100,7 +9110,9 @@ a.text-dark:focus,a.text-dark:hover {
 
   h2,h3 {
     page-break-after: avoid;
-  }@  page {
+  }
+  
+  @page {
     size: a3;
   }
 
@@ -9145,4 +9157,6 @@ a.text-dark:focus,a.text-dark:hover {
     border-color: #dee2e6;
   }
 }
+
+
 /*# sourceMappingURL=bootstrap.min.css.map */

@@ -153,7 +153,7 @@
   .fa-rotate-270,
   .fa-flip-horizontal,
   .fa-flip-vertical {
-    -ms-transform: none; /* Reset for IE */
+    transform: none; /* Reset for IE */
   }
 }
 :root .fa-rotate-90,
