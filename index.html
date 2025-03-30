@@ -3185,12 +3185,22 @@
                               <span class="trending-year">Feb 2019</span>
                             </div>
                             <div class="iq-custom-select d-inline-block sea-epi">
-                              <select name="Seasons" class="form-control season-select">
+                              <!-- Accessible label for screen readers (visually hidden) -->
+                              <label for="season-select" class="sr-only">Select Season</label>
+                              
+                              <!-- Season dropdown with proper attributes -->
+                              <select 
+                                name="Seasons" 
+                                id="season-select" 
+                                class="form-control season-select"
+                                aria-label="Select Season"
+                              >
+                                <!-- Corrected season options (no duplicates, sequential) -->
                                 <option value="Season1">Season 1</option>
                                 <option value="Season2">Season 2</option>
                                 <option value="Season3">Season 3</option>
                                 <option value="Season4">Season 4</option>
-                                <option value="Season4">Season 4</option>
+                                <option value="Season5">Season 5</option> <!-- Added missing season -->
                                 <option value="Season6">Season 6</option>
                               </select>
                             </div>
@@ -3679,14 +3689,30 @@
                               <span class="trending-year">Feb 2019</span>
                             </div>
                             <div class="iq-custom-select d-inline-block sea-epi">
-                              <select name="Seasons" class="form-control season-select">
-                                <option value="Season1">Season 1</option>
-                                <option value="Season2">Season 2</option>
-                                <option value="Season3">Season 3</option>
-                                <option value="Season4">Season 4</option>
-                                <option value="Season5">Season 5</option>
-                                <option value="Season6">Season 6</option>
+                              <!-- Accessible label (visually hidden but available for screen readers) -->
+                              <label for="season-select" class="visually-hidden">Season Selection</label>
+                              
+                              <!-- Enhanced select element -->
+                              <select 
+                                name="Seasons" 
+                                id="season-select" 
+                                class="form-control season-select"
+                                aria-labelledby="season-label"
+                              >
+                                <!-- Default prompt option -->
+                                <option value="" disabled selected hidden>Select a season</option>
+                                
+                                <!-- Season options -->
+                                <option value="S1">Season 1</option>
+                                <option value="S2">Season 2</option>
+                                <option value="S3">Season 3</option>
+                                <option value="S4">Season 4</option>
+                                <option value="S5">Season 5</option>
+                                <option value="S6">Season 6</option>
                               </select>
+                              
+                              <!-- Optional visible label (uncomment if needed) -->
+                              <!-- <span id="season-label" class="select-label">Choose Season:</span> -->
                             </div>
 
                             <div class="episodes-contens mt-4">
